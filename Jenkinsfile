@@ -10,12 +10,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'Testing'
+                sh './script/test'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'Deploying'
+                sh './script/deploy'
             }
         }
     }
