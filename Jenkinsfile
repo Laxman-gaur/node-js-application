@@ -8,20 +8,4 @@ pipeline {
             }
         }
     }
-
-    stages {
-        stage('test') { 
-            steps {
-                sh 'testing' 
-            }
-        }
-    }
-
-    stages {
-        stage('deploy') { 
-            steps {
-                sh 'deploying' 
-            }
-        }
-    }
 }
