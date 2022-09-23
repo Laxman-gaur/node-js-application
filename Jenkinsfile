@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'node-1'
+    agent 'node-1'
         stages {
         stage('Build') { 
             steps {
@@ -16,5 +16,4 @@ pipeline {
                 sh 'npm config ls' 
             }
         }
-    }
 }
