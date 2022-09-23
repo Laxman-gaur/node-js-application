@@ -1,5 +1,5 @@
 pipeline {
-    label linux
+    label node-1
 
     stages {
         stage('Build') {
