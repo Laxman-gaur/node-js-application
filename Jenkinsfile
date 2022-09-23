@@ -9,7 +9,7 @@ pipeline {
         }
         stage('test') { 
             steps {
-                sh 'testing' 
+                sh 'npm config ls' 
             }
         }
     }
