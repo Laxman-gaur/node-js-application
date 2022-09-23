@@ -1,7 +1,8 @@
 pipeline {
-    agent any
+    agent {
+        label 'node-1'
 
-    stages {
+        stages {
         stage('Build') { 
             steps {
                 sh 'npm install' 
