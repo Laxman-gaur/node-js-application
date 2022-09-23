@@ -1,22 +1,26 @@
 pipeline {
-    label node-1
+    agent any
 
     stages {
-        stage('Build') {
+        stage('Build') { 
             steps {
-                sh 'npm install'
+                sh 'npm install' 
             }
         }
-        
-        stage('Test') {
+    }
+
+    stages {
+        stage('test') { 
             steps {
-                sh 'npm test'
+                sh 'testing' 
             }
         }
-        
-        stage('deploy') {
+    }
+
+    stages {
+        stage('deploy') { 
             steps {
-                sh 'npm deploy'
+                sh 'deploying' 
             }
         }
     }
