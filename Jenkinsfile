@@ -12,5 +12,10 @@ pipeline {
                 sh 'npm config ls' 
             }
         }
+        stage('deploy') { 
+            steps {
+                sh 'jenkins/scripts/deploy.sh'' 
+            }
+        }
     }
 }
