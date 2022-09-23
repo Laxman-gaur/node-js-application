@@ -1,19 +1,20 @@
 pipeline {
-    agent 'node-1'
-        stages {
-        stage('Build') { 
+    agent any
+    stages {
+        stage('Hello') {
             steps {
-                sh 'npm install' 
+                sh 'npm install'
             }
         }
-        stage('test') { 
+        stage('Hello') {
+            steps {
+                sh 'npm config ls'
+            }
+        }
+        stage('Hello') {
             steps {
                 sh 'npm config ls' 
             }
         }
-        stage('deploy') { 
-            steps {
-                sh 'npm config ls' 
-            }
-        }
+    }
 }
