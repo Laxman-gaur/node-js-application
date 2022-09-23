@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'ubuntu'}
+    agent any
     stages {
         stage('build') {
             steps {
@@ -13,7 +13,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                sh 'npm config ls' 
+                sh 'node server.js' 
             }
         }
     }
