@@ -14,7 +14,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                sh 'npm config ls' 
+                sh 'node server.js' 
             }
         }
     }
