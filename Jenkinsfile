@@ -1,19 +1,15 @@
 pipeline {
-    agent any
-    stages {
-        stage('build') {
+     agent any
+     stages {
+        stage("Build") {
             steps {
-                sh 'npm install'
+                sh "sudo npm install"
+                sh "sudo npm run build"
             }
         }
-        stage('test') {
+        stage("Deploy") {
             steps {
-                sh 'npm config ls'
-            }
-        }
-        stage('deploy') {
-            steps {
-                sh 'npm config ls' 
+                sh "node server.js"
             }
         }
     }
