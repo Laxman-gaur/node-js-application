@@ -5,12 +5,12 @@ pipeline {
 
         stage('git-clone ') {
             steps {
-                sh 'git clone https://github.com/Laxman-gaur/node-js-application.git' 
+                //sh 'git clone https://github.com/Laxman-gaur/node-js-application.git' 
             }
         }
         stage('change directory') {
             steps {
-                //sh 'cd /home/ubuntu/node-js-application' 
+                sh 'cd /home/ubuntu/node-js-application' 
             }
         }
         stage('build') {
