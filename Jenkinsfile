@@ -1,6 +1,8 @@
 pipeline {
     agent any
+
     stages {
+
         stage('git-clone ') {
             steps {
                 sh 'git clone https://github.com/Laxman-gaur/node-js-application.git' 
@@ -8,7 +10,7 @@ pipeline {
         }
         stage('change directory') {
             steps {
-                sh 'cd /home/ubuntu/node/node-js-application' 
+                sh 'cd /home/ubuntu/node-js-application' 
             }
         }
         stage('build') {
