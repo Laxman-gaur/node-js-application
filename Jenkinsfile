@@ -10,7 +10,7 @@ pipeline {
         }
         stage('change directory') {
             steps {
-                sh 'cd /home/ubuntu/node-js-application' 
+                //sh 'cd /home/ubuntu/node-js-application' 
             }
         }
         stage('build') {
